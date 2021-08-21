@@ -18,32 +18,33 @@
         <section class="grid grid-cols-3 gap-4 w-3/4 mx-auto mt-7">
             <div class="bg-yellow-300 p-10">
                 <h1>Deposit</h1>
-                <h2>$<span>00</span></h2>
+                <h2>$<span id="deposit-total">00</span></h2>
             </div>
             <div class="bg-yellow-300 p-10">
                 <h1>Withdraw</h1>
-                <h2>$<span>00</span></h2>
+                <h2>$<span id="withdraw-total">00</span></h2>
             </div>
             <div class="bg-yellow-300 p-10">
                 <h1>Balance</h1>
-                <h2>$<span>00</span></h2>
+                <h2>$<span id="balance-total">1200</span></h2>
             </div>
         </section>
         <section class="grid grid-cols-2 gap-2 w-3/4 mx-auto mt-7">
             <div class="p-10 bg-blue-300">
                 <h3 class="text-2xl text-gray-900 font-medium mb-4">Please Deposit</h3>
-                <input id="" class="border-2 block border-gray-400 mb-2 w-3/4 px-2" type="number"
+                <input id="deposit-input" class="border-2 block border-gray-400 mb-2 w-3/4 px-2" type="number"
                     placeholder="Deposite Money">
-                <button class="bg-yellow-400 mb-5 p-1 rounded">Deposit</button>
+                <button id="deposit-button" class="bg-yellow-400 mb-5 p-1 rounded">Deposit</button>
             </div>
             <div class="p-10 bg-blue-300">
                 <h3 class="text-2xl text-gray-900 font-medium mb-4">Withdraw From Here</h3>
-                <input class="border-2 block border-gray-400 mb-2 w-3/4 px-2" type="number"
+                <input id="withdraw-input" class="border-2 block border-gray-400 mb-2 w-3/4 px-2" type="number"
                     placeholder="How Much You Want to Withdraw">
-                <button class="bg-yellow-400 mb-5 p-1 rounded">Withdraw</button>
+                <button id="withdraw-button" class="bg-yellow-400 mb-5 p-1 rounded">Withdraw</button>
             </div>
         </section>
     </main>
+    <script src="Js Files/Bank.js"></script>
 </body>
 
 </html>
