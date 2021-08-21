@@ -43,7 +43,7 @@ document.getElementById('deposit-button').addEventListener('click', function () 
     depositTotal.innerText = newDepositTotal;
     // console.log(depositeTotalAmount);
 
-    // update account balance
+    // update account balance after new deposit
     const balanceTotal = document.getElementById('balance-total');
     const balanceTotalText = balanceTotal.innerText;
     const previousBalanceTotal = parseFloat(balanceTotalText);
@@ -64,7 +64,7 @@ document.getElementById('withdraw-button').addEventListener('click', function ()
     const newWithdrawTotal = previousWithdrawAmount + newWithdrawAmount;
     withdrawTotal.innerText = newWithdrawTotal;
 
-    // update balance
+    // update balance after withdraw
 
     const balanceTotal = document.getElementById('balance-total');
     const balanceTotalText = balanceTotal.innerText;
