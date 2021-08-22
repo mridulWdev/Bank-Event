@@ -44,10 +44,19 @@ function updateTotalField(totoFeildAmount, amount) {
     amountTotal.innerText = previousTotal + amount;
 }
 
-function updateBalance(amount, isAdd) {
+function getCurrentBalance() {
     const balanceTotal = document.getElementById('balance-total');
+    debugger;
     const balanceTotalText = balanceTotal.innerText;
     const previousBalanceTotal = parseFloat(balanceTotalText);
+    return previousBalanceTotal;
+}
+
+function updateBalance(amount, isAdd) {
+    const balanceTotal = document.getElementById('balance-total');
+    // const balanceTotalText = balanceTotal.innerText;
+    // const previousBalanceTotal = parseFloat(balanceTotalText);
+    const previousBalanceTotal = getCurrentBalance();
     if (isAdd == true) {
         balanceTotal.innerText = previousBalanceTotal + amount;
     }
@@ -107,9 +116,13 @@ document.getElementById('withdraw-button').addEventListener('click', function ()
     // // const currentBalance = getBalance('balance-total');
     // balanceTotal.innerText = previousBalanceTotal - withdrawAmount;
     const withdrawAmount = getInput('withdraw-input');
-    if (withdrawAmount > 0) {
+    const currentBalance = getCurrentBalance();
+    if (withdrawAmount > 0 && withdrawAmount < currentBalance) {
         updateTotalField('withdraw-total', withdrawAmount);
         updateBalance(withdrawAmount, false);
+    }
+    if else (withdrawAmount > currentBalance){
+        console.log('you inpur wrong amount')
     }
 
 
