@@ -46,7 +46,7 @@ function updateTotalField(totoFeildAmount, amount) {
 
 function getCurrentBalance() {
     const balanceTotal = document.getElementById('balance-total');
-    debugger;
+    // debugger;
     const balanceTotalText = balanceTotal.innerText;
     const previousBalanceTotal = parseFloat(balanceTotalText);
     return previousBalanceTotal;
@@ -121,9 +121,10 @@ document.getElementById('withdraw-button').addEventListener('click', function ()
         updateTotalField('withdraw-total', withdrawAmount);
         updateBalance(withdrawAmount, false);
     }
-    if else (withdrawAmount > currentBalance){
-        console.log('you inpur wrong amount')
+    else if (withdrawAmount > currentBalance) {
+        console.log('you input wrong amount')
     }
+
 
 
 })
